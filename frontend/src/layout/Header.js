@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import AppBar from '@mui/material/AppBar';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -77,25 +78,18 @@ const Header = ({ onSidebarOpen }) => {
           </Box>
           <Link href='/' style={{ textDecoration: 'none' }}>
             <IconButton size='large' disabled>
-              <Avatar
-                variant='rounded'
-                sx={{
-                  backgroundColor: theme.palette.primary.main,
-                  height: 52,
-                  width: 52,
-                  marginRight: '15px',
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faGraduationCap}
-                  style={{
-                    color: theme.palette.common.white,
-                    height: 30,
-                    width: 30,
-                  }}
-                />
-              </Avatar>
-              <Typography
+              
+                <Box
+                      component={LazyLoadImage}
+                      sx={{
+                          display: { md: 'block', xs: 'none'},
+                          marginRight: '15px'
+                        }}
+                      src="/logo/logo.svg"
+                    >
+                    </Box>
+             
+              {/* <Typography
                 variant='h3'
                 component='div'
                 sx={{
@@ -107,8 +101,8 @@ const Header = ({ onSidebarOpen }) => {
                   display: { md: 'inline', xs: 'none' },
                 }}
               >
-                Bob&apos;s Programming Academy
-              </Typography>
+              
+              </Typography> */}
             </IconButton>
           </Link>
           <Box sx={{ flexGrow: 1 }} />

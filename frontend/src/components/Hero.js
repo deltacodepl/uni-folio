@@ -1,5 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
@@ -39,7 +40,7 @@ const Hero = () => {
                       fontWeight={700}
                       align='center'
                     >
-                      Welcome to{' '}
+                      Environmentally concious for over 50 years{' '}
                     </Typography>
                     <Typography
                       color={theme.palette.primary.main}
@@ -48,7 +49,7 @@ const Hero = () => {
                       align='center'
                       marginBottom={3}
                     >
-                      Bob&apos;s Programming Academy
+                      Laminating, Coating and Metalizng technology
                     </Typography>
                   </Box>
                   <Box marginBottom={3}>
@@ -58,10 +59,7 @@ const Hero = () => {
                       color={theme.palette.text.secondary}
                       align='justify'
                     >
-                      In Bob&apos;s Programming Academy, we help both aspiring
-                      and established software developers gain more experience,
-                      take their skills to the next level and create excellent
-                      applications.
+                      
                     </Typography>
                   </Box>
                   <HeroButtons />
@@ -119,9 +117,9 @@ const Hero = () => {
                         },
                       }}
                     >
-                      <Box
+                       <Box
                         component={LazyLoadImage}
-                        src='/images/bg.jpg'
+                        src='/images/header.jpg'
                         alt='Background Image'
                         effect='blur'
                         height={{ xs: 'auto', md: 1 }}
@@ -129,6 +127,10 @@ const Hero = () => {
                         width={1}
                         maxWidth={1}
                       />
+                    {/* <Link href='/' style={{ textDecoration: 'none' }}>
+                    
+                    </Link> */}
+                      
                     </Box>
                   </Box>
                 </Box>
